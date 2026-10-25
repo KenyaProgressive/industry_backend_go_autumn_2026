@@ -33,5 +33,5 @@ func (c *Cache[K, V]) Set(k K, v V) bool {
 	}
 
 	c.items[k] = v
-	return false
+	return true
 }
