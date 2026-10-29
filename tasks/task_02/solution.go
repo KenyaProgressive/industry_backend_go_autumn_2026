@@ -14,11 +14,9 @@ func rotateRunes(s string, shift int) string {
 	}
 
 	if shift == 0 || len(symbols) == 1 {
-		return string(symbols) 
+		return string(symbols)
 	}
 
 	return string(append(symbols[shift:], symbols[:shift]...))
 
-
 }
-

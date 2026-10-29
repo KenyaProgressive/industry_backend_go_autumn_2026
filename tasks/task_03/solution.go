@@ -13,15 +13,15 @@ func fizzBuzz(n int) (string, error) {
 		return "", ErrZero
 	}
 
-	if n % 3 == 0 && n % 5 == 0 {
+	if n%3 == 0 && n%5 == 0 {
 		return "FizzBuzz", nil
 	}
 
-	if n % 3 == 0 {
+	if n%3 == 0 {
 		return "Fizz", nil
 	}
 
-	if n % 5 == 0{
+	if n%5 == 0 {
 		return "Buzz", nil
 	}
 

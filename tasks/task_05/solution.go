@@ -28,7 +28,7 @@ func (c *Cache[K, V]) Set(k K, v V) bool {
 		return ok
 	}
 
-	if len(c.items) + 1 > c.capacity {
+	if len(c.items)+1 > c.capacity {
 		return false
 	}
 

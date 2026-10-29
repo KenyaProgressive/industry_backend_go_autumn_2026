@@ -44,7 +44,6 @@ func (c *LRUCache[K, V]) Get(key K) (value V, ok bool) {
 
 }
 
-
 func (c *LRUCache[K, V]) Set(key K, value V) {
 
 	if c.capacity <= 0 {
@@ -58,16 +57,14 @@ func (c *LRUCache[K, V]) Set(key K, value V) {
 		return
 	}
 
-	if len(c.items) + 1 > c.capacity {
+	if len(c.items)+1 > c.capacity {
 		last := c.ll.Back()
 		ent := last.Value.(entry[K, V])
 		delete(c.items, ent.key)
 		c.ll.Remove(last)
 	}
-	
+
 	newElem := c.ll.PushFront(entry[K, V]{key: key, value: value})
 	c.items[key] = newElem
 
-
 }
-
