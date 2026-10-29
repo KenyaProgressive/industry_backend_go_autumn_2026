@@ -39,3 +39,5 @@ package-results.json
 change-policy-result.json
 changed_files.txt
 public/
+
+.DS_Store
